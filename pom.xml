@@ -5,7 +5,7 @@
     <groupId>dev.samstevens.totp</groupId>
     <artifactId>totp-parent-hangar</artifactId>
     <packaging>pom</packaging>
-    <version>1.7.1</version>
+    <version>1.7.2-SNAPSHOT</version>
     <properties>
         <!-- compiling -->
         <java.version>17</java.version>
