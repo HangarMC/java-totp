@@ -8,9 +8,13 @@ Generates QR codes that are recognisable by applications like Google Authenticat
 
 Inspired by [PHP library for Two Factor Authentication](https://github.com/RobThree/TwoFactorAuth), a similar library for PHP.
 
+### Fork
+
+This is a fork for HangarMC's needs, mostly just updating dependencies.
+
 ## Requirements
 
-- Java 8+
+- Java 17+
 
 
 
@@ -29,7 +33,7 @@ To add this library to your java project using Maven, add the following dependen
 ```xml
 <dependency>
   <groupId>dev.samstevens.totp</groupId>
-  <artifactId>totp</artifactId>
+  <artifactId>totp-hangar</artifactId>
   <version>1.7.1</version>
 </dependency>
 ```
@@ -40,7 +44,7 @@ To add the dependency using Gradle, add the following to the build script:
 
 ```
 dependencies {
-  compile 'dev.samstevens.totp:totp:1.7.1'
+  compile 'dev.samstevens.totp:totp-hangar:1.7.1'
 }
 ```
 
