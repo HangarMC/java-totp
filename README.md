@@ -32,10 +32,21 @@ To add this library to your java project using Maven, add the following dependen
 
 ```xml
 <dependency>
-  <groupId>dev.samstevens.totp</groupId>
-  <artifactId>totp-hangar</artifactId>
-  <version>1.7.2-SNAPSHOT</version>
+  <groupId>io.papermc.hangar.totp</groupId>
+  <artifactId>totp</artifactId>
+  <version>1.8.0</version>
 </dependency>
+```
+
+You will also need to add the following repository to your POM:
+
+```xml
+<repositories>
+  <repository>
+    <id>papermc-repo</id>
+    <url>https://repo.papermc.io/repository/maven-public/</url>
+  </repository>
+</repositories>
 ```
 
 #### Gradle
@@ -44,10 +55,19 @@ To add the dependency using Gradle, add the following to the build script:
 
 ```
 dependencies {
-  compile 'dev.samstevens.totp:totp-hangar:1.7.2-SNAPSHOT'
+  compile 'io.papermc.hangar.totp:totp:1.8.0'
 }
 ```
 
+You will also need to add the following repository to your build script:
+
+```
+repositories {
+  maven {
+    url "https://repo.papermc.io/repository/maven-public/"
+  }
+}
+```
 
 
 ## Usage

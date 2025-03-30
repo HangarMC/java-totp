@@ -5,6 +5,7 @@ import org.apache.commons.net.ntp.NTPUDPClient;
 import org.apache.commons.net.ntp.TimeInfo;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.time.Duration;
 
 public class NtpTimeProvider implements TimeProvider {
 
@@ -31,7 +32,7 @@ public class NtpTimeProvider implements TimeProvider {
         checkHasDependency(dependentClass);
 
         client = new NTPUDPClient();
-        client.setDefaultTimeout(timeout);
+        client.setDefaultTimeout(Duration.ofMillis(timeout));
         ntpHost = InetAddress.getByName(ntpHostname);
     }
 

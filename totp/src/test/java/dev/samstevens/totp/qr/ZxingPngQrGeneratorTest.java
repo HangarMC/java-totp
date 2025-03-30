@@ -4,10 +4,12 @@ import com.google.zxing.Writer;
 import com.google.zxing.WriterException;
 import dev.samstevens.totp.exceptions.QrGenerationException;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import static dev.samstevens.totp.IOUtils.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -37,13 +39,13 @@ public class ZxingPngQrGeneratorTest {
     }
 
     @Test
-    public void testImageSize() throws QrGenerationException, IOException {
+    public void testImageSize(@TempDir Path tempDir) throws QrGenerationException, IOException {
         ZxingPngQrGenerator generator = new ZxingPngQrGenerator();
         generator.setImageSize(500);
         byte[] data = generator.generate(getData());
 
         // Write the data to a temp file and read it into a BufferedImage to get the dimensions
-        String filename = "/tmp/test_qr.png";
+        String filename = tempDir.resolve("test_qr.png").toAbsolutePath().toString();
         writeFile(data, filename);
         File file = new File(filename);
         BufferedImage image = ImageIO.read(file);

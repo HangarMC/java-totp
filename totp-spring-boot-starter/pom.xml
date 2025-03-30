@@ -4,24 +4,24 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>dev.samstevens.totp</groupId>
-        <artifactId>totp-parent-hangar</artifactId>
-        <version>1.7.2-SNAPSHOT</version>
+        <groupId>io.papermc.hangar.totp</groupId>
+        <artifactId>totp-parent</artifactId>
+        <version>1.8.0</version>
     </parent>
 
     <name>${project.groupId}:${project.artifactId}</name>
-    <artifactId>totp-spring-boot-starter-hangar</artifactId>
+    <artifactId>totp-spring-boot-starter</artifactId>
 
     <description>A Spring Boot starter to autoconfigure the Java-TOTP library.</description>
 
     <properties>
-        <spring.version>3.0.5</spring.version>
+        <spring.version>3.4.4</spring.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>totp-hangar</artifactId>
+            <artifactId>totp</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

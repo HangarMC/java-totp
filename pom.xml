@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>dev.samstevens.totp</groupId>
-    <artifactId>totp-parent-hangar</artifactId>
+    <groupId>io.papermc.hangar.totp</groupId>
+    <artifactId>totp-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.7.2-SNAPSHOT</version>
+    <version>1.8.0</version>
     <properties>
         <!-- compiling -->
         <java.version>17</java.version>
@@ -16,10 +16,10 @@
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
         <!-- plugins -->
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
-        <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
+        <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
+        <maven-source-plugin.version>3.3.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
+        <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
     </properties>
 
     <name>${project.groupId}:${project.artifactId}</name>
